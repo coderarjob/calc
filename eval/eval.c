@@ -91,8 +91,8 @@ float eval()
   int ret;
 	
   while ((ret = getch(&c)) > 0 && c !='\0')
-  {
-    #ifdef DEBUG
+  {	
+  	#ifdef DEBUG
       printf("\nInput: %d", c);
     #endif
       
@@ -101,7 +101,7 @@ float eval()
       //Get number from expression.
       
       #ifdef DEBUG
-	printf("\nProcessing digit: %c", c);
+				printf("\nProcessing digit: %c", c);
       #endif
       
       float out = getinteger(c, &c);
@@ -158,7 +158,7 @@ float eval()
     else
     {	
       #ifdef DEBUG
-	printf("Invalid operator: %d\n", c);
+				printf("Invalid operator: %d\n", c);
       #endif
       add_error("EVAL: Error: Cannot find operator. Invalid operator.");
       return -1; //ERROR
@@ -215,7 +215,7 @@ int main(int argc, char *argv[])
     return 0;
   }
   
-  float result = eval();
+	float result = eval();
   
   if (iserror)
     printf("\nFAILURE:%s\n", errorstr);

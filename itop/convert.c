@@ -95,7 +95,7 @@ int convert(char expr[], char output[])
       printf("\nReading %c" , c);
     #endif
 		
-    if (is_digit(c))
+    if (is_digit(c) || c == '.')
     {	
       output[windex] = c;	
       #if defined(MODE)
@@ -104,7 +104,7 @@ int convert(char expr[], char output[])
 
       windex++; //Write index increment;
     }
-    else if (is_operator(c))
+		else if (is_operator(c))
     {
       #ifdef DEBUG
 		  printf("\nRead new operator, %c, searching precedence. prevop = %c", c, (char)prevop);

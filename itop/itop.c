@@ -12,6 +12,7 @@ FEATURES:
   * Decimal points are supported.
   * Operator length qreater than one is supported, but not implemented, for the sake of simplicity. In future this feature will be implemented by functions not operators. But Functions are not supported now.
   * Unary operator is supported.
+	* ^ (power) operator is supported.
 */
 
 #include <stdio.h>
